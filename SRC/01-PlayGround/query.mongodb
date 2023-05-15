@@ -1,0 +1,112 @@
+use("Arkitask")
+
+
+
+    
+db.Usuario.insertOne([
+    {
+        NumDocumento:identificacion,
+        Nombre: nombre,
+        Apellido: apellido,
+        Telefono: telefono,
+        FechaNacimiento: fechaNac,
+        Email: email,
+        Contraseña: contraseña,
+        Rol: rol,
+        Actividades:[
+            {
+                NombreAc: nombreAc,
+                Descrip: descrip,
+                FechaPublicacion: FechaPubli,
+                FechaLimiteEntrega: FechaLim
+            } 
+        ] ,
+        Proyecto:[
+            {
+                NombrePro: nombrePro,
+                TipoProyecto: tipoPro
+            }
+        ] 
+    }
+])
+
+
+
+/*db.Usuario.insertMany([
+    {
+        NumDocumento: "93547812",
+        Nombre: "Aldo",
+        Apellido: "Escobar",
+        Telefono: "3186187546",
+        FechaNacimiento: "20/12/1972",
+        Email: "aldo@gmail",
+        Contraseña: "95135-",
+        Rol: "Inspector de obra",
+        Actividades:[
+            {
+                NombreAc: "Control de materiales y mano de obra y/o medición de trabajos realizados",
+                Descrip: "Un/a inspector/a no puede dar órdenes en obra, y el/la DO no es responsable de las fallas, errores u omisiones en el desempeño de sus funciones.",
+                FechaPublicacion: "12/5/2021",
+                FechaLimiteEntrega: "20/12/2021"
+            }
+        ] ,
+        Proyecto:[
+            {
+                NombrePro: "Banco",
+                TipoProyect: "Comercial"
+            } 
+        ] 
+
+    },
+    {
+        NumDocumento:"9874563",
+        Nombre: "Diana",
+        Apellido: "Varela",
+        Telefono: "3224567895",
+        FechaNacimiento: "27/12/1981",
+        Email: "diana@gmail",
+        Contraseña: "98765/",
+        Rol: "Gerente de Construcciones",
+        Actividades:[
+            {
+                NombreAc: "Manejo de los diferentes agentes en la obra",
+                Descrip: "conducir y concertar la gestión ante y entre los múltiples agentes que intervienen en el estudio, tramitación, contratación y ejecución de su proyecto, desde su inicio hasta su terminación. ",
+                FechaPublicacion: "12/5/2021",
+                FechaLimiteEntrega: "20/12/2021"
+            } 
+        ] ,
+        Proyecto:[
+            {
+            NombrePro: "Banco",
+            TipoProyecto: "Comercial"
+            }
+        ]
+
+    },
+])*/
+
+/*db.Usuario.update({
+    Nombre: "Aldo"
+},
+{ 
+    $set:{
+        Nombre: "Enrique",
+        Email: "aldo123@gmail.com"
+    }
+}
+)*/
+/*
+db.Usuario.updateOne({
+        "Nombre": "Diana"
+
+},
+{
+    $set:{
+        "Proyecto.$.NombreProyecto": "Banco"
+        
+    }
+})*/
+/*
+db.Usuario.remove({
+    Nombre:"Enrique"
+})*/
